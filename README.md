@@ -1,2 +1,2 @@
 # Delecious Finds custom
- I am this project from scratch with custom coding incomplete
+ This is a food website which I start creating by scratch on my own but I leave it in middle for making another website.
