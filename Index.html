@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Header&Footer.css">
+    <link rel="stylesheet" href="CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="CSS/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="CSS/Index.css">
+</head>
+<body>
+    <!-- Topbar Start Here---------------------- -->
+    <header>
+        <div class="row topbar">
+            <div class="col-md-8"></div>
+            <div class="col-md-2 topbar_social_icons">
+                <a href="" class="social-item"><i style="background-color: transparent;" class="fa-brands fa-facebook-f"></i></a>
+                    <a href="" class="social-item"><i style="background-color: transparent;" class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="social-item" ><i style="background-color: transparent;" class="fa-brands fa-youtube"></i></a>
+                    <a href="" class="social-item" ><i style="background-color: transparent;" class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="col-md-2 topbar_login_register" >
+                <a href=""><i style="background-color: transparent;" class="fa-solid fa-user"></i></a>
+                <a type="button" data-bs-toggle="modal" data-bs-target="#login">LOGIN</a><span style="color: rgb(122, 122, 122);">/</span>
+                <a type="button" data-bs-toggle="modal" data-bs-target="#register">REGISTER</a>
+                <!-- Modal for Login-->
+                <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="text-transform: capitalize;">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="staticBackdropLabel" style="color: var(--green); font-weight: bold;"><img src="images/Logofortitle.png" style="height: 4rem;"> Login</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5 style="text-transform: capitalize; margin-bottom: 1rem;">Login With</h5>
+                                <a href="#" class="facebook_login" style="height: 1.5rem; width: 12rem; background-color: #2051b3; border-radius: .2rem; color: #fff; display: flex; justify-content: left; padding-left: .5rem; border: 1px solid rgb(0, 0, 128);">
+                                    <i style="background-color: transparent;" class="fa-brands fa-facebook-f"></i><span style="font-size: .8rem; margin-left: .4rem; padding-left: .4rem; border-left: 1px solid rgb(0, 0, 128); text-transform: capitalize;">Sign in with Facebook</span>
+                                </a>
+                            </div>
+                            <div class="col-md-7" style="display: flex; justify-content: Left; align-items: center; flex-direction: column;">
+                                <h5 style="text-align: left; text-transform: capitalize;">Login Via Email</h5>
+                                <input type="email" placeholder="Email" id="login_email" style="border: 1px solid gray; border-radius: .2rem; padding: .4rem; width: 12rem; margin: 1.2rem;">
+                                <input type="text" placeholder="Password" id="login_pass" style="border: 1px solid gray; border-radius: .2rem; padding: .4rem; width: 12rem; margin-bottom: 1rem;">
+                                <button onclick="Login()" type="button" data-bs-dismiss="modal" aria-label="Close" style="width: 12rem; border: none; background-color: var(--green); color: #fff;">LOGIN</button>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="modal-footer" style="display: flex; justify-content: center; align-items: center;">
+                            <p>Don't have an account?</p>
+                            <a type="button" data-bs-toggle="modal" data-bs-target="#register" data-bs-dismiss="modal" aria-label="Close" class="Signup">Sign Up Now</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Modal for Register-->
+                <div class="modal fade" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="text-transform: capitalize;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="staticBackdropLabel" style="color: var(--green); font-weight: bold;"><img src="images/Logofortitle.png" style="height: 4rem;"> Register Here</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5 style="text-transform: capitalize; margin-bottom: 1rem">Login With</h5>
+                                <a href="#" class="facebook_login" style="height: 1.5rem; width: 12rem; background-color: #2051b3; border-radius: .2rem; color: #fff; display: flex; justify-content: left; padding-left: .5rem; border: 1px solid rgb(0, 0, 128);">
+                                    <i style="background-color: transparent;" class="fa-brands fa-facebook-f"></i><span style="font-size: .8rem; margin-left: .4rem; padding-left: .4rem; border-left: 1px solid rgb(0, 0, 128); text-transform: capitalize;">Sign in with Facebook</span>
+                                </a>
+                            </div>
+                            <div class="col-md-7" style="display: flex; justify-content: Left; align-items: center; flex-direction: column;">
+                                <h5 style="text-align: left; text-transform: capitalize;">Register Via Email</h5>
+                                <input type="text" placeholder="First Name*" style="border: 1px solid gray; border-radius: .2rem; padding: .4rem; width: 12rem; margin: 1.2rem;">
+                                <input type="text" placeholder="Last Name*" style="border: 1px solid gray; border-radius: .2rem; padding: .4rem; width: 12rem; margin-bottom: 1rem;">
+                                <input id="username" type="text" placeholder="Username*" style="border: 1px solid gray; border-radius: .2rem; padding: .4rem; width: 12rem; margin-bottom: 1rem;">
+                                <input type="email" placeholder="Email*" id="register_email" style="border: 1px solid gray; border-radius: .2rem; padding: .4rem; width: 12rem; margin-bottom: 1rem;">
+                                <input id="password" type="text" placeholder="Password*" id="register_pass" style="border: 1px solid gray; border-radius: .2rem; padding: .4rem; width: 12rem; margin-bottom: 1rem;">
+                                <button onclick="Register()" type="button" data-bs-toggle="modal" data-bs-target="#login" data-bs-dismiss="modal" aria-label="Close" class="Signup" style="width: 12rem; border: none; background-color: var(--green); color: #fff;">REGISTER</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="display: flex; justify-content: center; align-items: center;">
+                        <p>You have already an account?</p>
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#login" data-bs-dismiss="modal" aria-label="Close" class="Signup">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+   <!-- Social Icons Toolbar ------------------->
+   <div class="Social-toolbar">
+    <a href="#" class="Social-icons" style="background-color: #2051b3;"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" class="Social-icons" style="background-color: #38b9e0;"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#" class="Social-icons" style="background-color: gray;"><i class="fa-solid fa-envelope"></i></a>
+    <a href="#" class="Social-icons" style="background-color: red;"><i class="fa-brands fa-pinterest-p"></i></a>
+    <a href="#" class="Social-icons" style="background-color: rgb(255, 89, 89);"><i class="fa-solid fa-plus"></i></a>
+</div>
+
+<!-- Navbar Start here--------------------------  -->
+   <nav class="p-3">
+        <div class="row">
+            <div class="col-md-3">
+                <a class="navbar-brand" href="#"><img class="logo" src="images/Logofortitle.png"><span>Delicious Finds</span></a>
+            </div>
+            <div class="col-md-7">
+                <nav class="navbar sticky-top">
+                <ul class="nav nav-pills justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Drinks</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dish Type
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <div class="row">
+                                <div class="col-md-6" >
+                                    <li><a class="dropdown-item" href="#">Pizza</a></li>
+                                    <li><a class="dropdown-item" href="#">Pasta</a></li>
+                                    <li><a class="dropdown-item" href="#">Parathas</a></li>
+                                    <li><a class="dropdown-item" href="#">Kababs</a></li>
+                                    <li><a class="dropdown-item" href="#">Burger & Sandwiches</a></li>
+                                </div>
+                                <div class="col-md-6">
+                                    <li><a class="dropdown-item" href="#">Cakes</a></li>
+                                    <li><a class="dropdown-item" href="#">Salads</a></li>
+                                    <li><a class="dropdown-item" href="#">Breads</a></li>
+                                    <li><a class="dropdown-item" href="#">Kids Menu</a></li>
+                                    <li><a class="dropdown-item" href="#">Desserts</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                      </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Breakfast
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="width: 15rem;">
+                                    <li><a class="dropdown-item" href="#">Dessi Breakfast</a></li>
+                                    <li><a class="dropdown-item" href="#">Eggs</a></li>
+                                    <li><a class="dropdown-item" href="#">Parathas</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Lunch / Dinner
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <div class="row">
+                                <div class="col-md-6" >
+                                    <li><a class="dropdown-item" href="#">Gravys</a></li>
+                                    <li><a class="dropdown-item" href="#">Chinese</a></li>
+                                    <li><a class="dropdown-item" href="#">Burgers</a></li>
+                                    <li><a class="dropdown-item" href="#">Biryani & Pulao</a></li>
+                                    <li><a class="dropdown-item" href="#">Kababs</a></li>
+                                </div>
+                                <div class="col-md-6">
+                                    <li><a class="dropdown-item" href="#">Sandwiches</a></li>
+                                    <li><a class="dropdown-item" href="#">Sabzi (Vegetables)</a></li>
+                                    <li><a class="dropdown-item" href="#">Salads</a></li>
+                                    <li><a class="dropdown-item" href="#">Daal</a></li>
+                                    <li><a class="dropdown-item" href="#">Pizza</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Desserts</a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+            <div class="col-md-2">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><span class="navbar-toggler-icon"></span></button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <h2>Recipe Menu</h2>
+                        <div class="Menu">
+                            <a class="Menu-item" href="#">Fried Items</a>
+                            <a class="Menu-item" href="#">Biryani & Pulao</a>
+                            <a class="Menu-item" href="#">Parathas</a>
+                            <a class="Menu-item" href="#">Healthy</a>
+                            <a class="Menu-item" href="#">Desserts</a>
+                            <a class="Menu-item" href="#">Chutneys & Dips</a>
+                            <a class="Menu-item" href="#">Pizzas</a>
+                            <a class="Menu-item" href="#">Home Mades</a>
+                            <a class="Menu-item" href="#">Burgers & Sandwiches</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+   </nav>
+   
+<!-- Banner1 with search bar Start Here ----------------------- -->
+<div class="container-fluid banner1">
+<h2>We are here to make</h2>
+<h1>Cooking Fun Again</h1>
+<div class="search">
+    <input type="text" placeholder="Aj Kiya Pakana Hai?">
+    <Button><i class="fa-solid fa-magnifying-glass"></i></Button>
+</div>
+</div>
+
+   <!-- 1st Section Our Recipes Start Here-------------------------- -->
+   <div class="our_recipes">
+    <h1>Our <span>Recipes</span></h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Most Recent</li>
+        <li class="breadcrumb-item"><a href="#">Most Viewed</a></li>
+        <li class="breadcrumb-item"><a href="">Most Favourite</a></li>
+        <li class="breadcrumb-item"><a href="">All</a></li>
+      </ol>
+    </nav>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="big_card">
+                <img src="images/Our Recipes/Hara-masala-Tawa-Kaleji.jpg" alt="">
+                <span class="like"><i class="fa-solid fa-heart"></i></span>
+                <h3>Hara Masala Tawa Kaleji</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="images/Our Recipes/Mutton-rosh-with-Chana-daal.jpg" alt=""> 
+                <span class="like"><i class="fa-solid fa-heart"></i></span>
+                <h4>Mutton Rosh with Chana Daal</h4>
+            </div>
+            <div class="card">
+                <img src="images/Our Recipes/Mutton-rosh-with-Chana-daal.jpg" alt="">
+                <div class="like"><i class="fa-solid fa-heart"></i></div>
+                <h4>Mutton Rosh with Chana Daal</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="images/Our Recipes/Mutton-rosh-with-Chana-daal.jpg" alt="">
+                <div class="like"><i class="fa-solid fa-heart"></i></div>
+                <h4>Mutton Rosh with Chana Daal</h4>
+            </div>
+            <div class="card">
+                <img src="images/Our Recipes/Mutton-rosh-with-Chana-daal.jpg" alt="">
+                <div class="like"><i class="fa-solid fa-heart"></i></div>
+                <h4>Mutton Rosh with Chana Daal</h4>
+            </div>
+        </div>
+    </div>
+   </div>
+
+
+    <!-- Owl Carousel of Our Cooking Partners ----------------------->
+    <div class="container-fluid cooking_parner">
+        <h1 style=" margin-bottom: 2rem;">Our Happy <span>Cooking Partners</span></h1>
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="images/Cooking Partners/Dawn-Foods-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Gaviscon-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Kenwood-Logo-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Lipton-logo.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Meat-One-Meat-Experts-Logo-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/New-Knorr-Logo.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Olpers-cream-logo-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Rooh-Afza-Logo-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/SHAN-logo.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Simply-Sufi-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/sufi-cooking-oil-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Surf-Excel-Logo-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Tux-Tissues.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Vim-Logo.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Walls-Logo-1.png" alt=""></div>
+        <div class="item"><img src="images/Cooking Partners/Youngs-Honey-Logo-1.png" alt=""></div>
+    </div>
+</div>
+
+    <!-- footer section start -->
+    <div class="container-fluid">
+        <div class="row" style="text-transform: none;">
+            <div class="col-md-8">
+                <a class="footer-logo" href="">
+                    <img src="images/Logofortitle.png" alt="">
+                    <span>Delicious Finds</span>
+                </a>
+                <div class="navigation">
+                    <a href="" class="Navietm">Home</a>
+                    <a href="" class="Navietm">Recipes</a>
+                    <a href="" class="Navietm">Contact Us</a>
+                    <a href="" class="Navietm">About Us</a>
+                    <a href="" class="Navietm">Privacy Policy</a>
+                </div>
+                <p>
+                    Delicous Finds is all about redefining 'Cooking' for you! It's the solution to that never ending problem of preparing high quality delicious food and curtailing the eating out habits of your loved ones! With modernized and yet simpe cooking methods, you are surely in for a flavorsome treat with our recipes that will surely make you the next talk of the town!
+                </p>
+                <p>
+                    Being Pakistan's first digita food video portal, we understand your difficulty of being unable to execute that perfect dish just by going through those long recipes & ending up with something not as good as the one you see on paper. Hence, we make sure to get this covered by bringing in videos that will help you prepare the same delicious food as you see in our videos.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <a href="#" title="Food Youtube Channels">
+                    <img src="images/Footer-award.png" alt="">
+                </a>
+                <h4>GET SOCIAL WITH US</h4>
+                <div class="social">
+                    <a href="" class="social-item"><i style="background-color: #2051b3;" class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+                    <a href="" class="social-item"><i style="background-color: #38b9e0;" class="fa-brands fa-twitter"></i><span>Twiter</span></a>
+                    <a href="" class="social-item" ><i style="background-color: red;" class="fa-brands fa-youtube"></i><span>Youtube</span></a>
+                    <a href="" class="social-item" ><i style="background-color: purple;" class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer section end  -->
+
+
+</body>
+</html>
+<script src="JS/jquery.min.js"></script>
+<script src="JS/owl.carousel.min.js"></script>
+<script src="JS/bootstrap.min.js"></script>
+<script src="JS/Script.js"></script>

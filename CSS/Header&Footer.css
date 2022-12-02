@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Quicksand';
+}
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:rgb(88, 88, 88);
+    --light-green:#f0fff6;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+/* Topbar Start Here-------------------------- */
+header{
+    background-color: rgb(53, 48, 48);
+    /* height: 5rem; */
+}
+header .topbar .topbar_social_icons .social-item{
+    border-radius: 100%;
+    border: 1px solid rgb(122, 122, 122);
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(122, 122, 122);
+    text-decoration: none;
+    padding: .8rem;
+    height: 1rem;
+    width: 1rem;
+}
+header .topbar .topbar_social_icons .social-item:hover{
+    border: 1px solid #fff;
+    color: #fff;
+}
+/* header .topbar .topbar_login_register a::before{
+    position: absolute;
+    content: "";
+    height: 4%;
+    width: 1px;
+    background-color: #888;
+    right: 6.45rem;
+} */
+header .topbar .topbar_login_register a{
+    margin-right: 1rem;
+    margin: .4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(122, 122, 122);
+    text-decoration: none;
+}
+header .topbar .topbar_login_register a:hover{
+    color: #fff;
+}
+
+.modal-content .modal-footer a{
+color: black !important;
+}
+.modal-content .modal-footer a:hover{
+font-weight: bold;
+}
+
+/* Navbar Start Here-------------------------- */
+nav{
+    background-color: var(--light-green);
+}
+
+.row{
+    text-transform: uppercase;
+}
+
+.row .col-md-3 a span{
+    text-transform: capitalize;
+    font-family: 'Quicksand';
+    color: var(--green);
+    font-size: 1.5rem;
+    margin-left: .5rem;
+}
+.logo{
+    height: 5rem;
+    margin-left: .5rem;
+}
+
+
+
+.row .col-md-7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-pills .nav-link{
+    margin: .2rem;
+    color: var(--green);
+    font-size: .9rem;
+}
+.nav-pills .nav-link.active{
+    color:#fff;background-color:var(--green)
+    
+}
+.nav-pills .nav-link:hover{
+    border-radius: .25rem;
+    color:#fff;background-color:var(--green)
+}
+.dropdown-menu{
+    height: auto;
+    width: 30rem;
+    /* background-color: var(--light-green); */
+    /* border: none; */
+}
+.dropdown-menu li{
+    font-size: .9rem;
+    padding: .5rem ;
+    margin: 0;
+}
+
+
+.dropdown-menu .row .col-md-6 .dropdown-item:hover,
+.dropdown-menu .dropdown-item:hover
+{
+    font-weight: 600;
+    background-color: #fff;
+    color: var(--green);
+}
+
+
+
+.row .col-md-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row .col-md-2 .navbar-toggler{
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+.row .col-md-2 .navbar-toggler .navbar-toggler-icon{
+    background-image: url(../images/Toggler\ icon.svg);
+}
+.offcanvas .btn-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.offcanvas .offcanvas-body{
+    padding: 0;
+    margin-top: 1rem;
+    font-family: 'Quicksand';
+}
+.offcanvas .offcanvas-body h2{
+    padding: 1rem;
+    background-color: var(--green);
+    color: #fff;
+}
+.offcanvas .offcanvas-body .Menu{
+    display: flex;
+    flex-direction: column;
+}
+.offcanvas .offcanvas-body .Menu .Menu-item{
+    text-decoration: none;
+    color: var(--green);
+    font-family: 'Quicksand';
+    padding: 1rem 2rem;
+    transition: .35s ease-in-out;
+}
+.offcanvas .offcanvas-body .Menu .Menu-item:hover{
+    color: #fff;
+    background-color: var(--green);
+    letter-spacing: .1rem;
+}
+/* Navbar End Here------------------------------ */
+
+
+/* Social Icon Toolbar ---------------------- */
+.Social-toolbar{
+    /* transform: translateZ(2px); */
+    position: fixed;
+    right: 0;
+    top: 40vh;
+}
+.Social-toolbar .Social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: .5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    /* border: 1px solid black; */
+    background-color: #666;
+    height: 3rem;
+    width: 3rem;
+    transition: .3s;
+    opacity: 20%;
+}
+.Social-toolbar .Social-icons:hover{
+    font-size: 1.8rem;
+    opacity: 100%;
+
+
+}
+
+/* Footer Start Here---------------------------------- */
+.container-fluid{
+    background-color: rgb(53, 48, 48);
+}
+.container-fluid .row .col-md-8{
+    padding: 1rem 3rem;
+}
+.container-fluid .row .col-md-8::before
+{
+    position: absolute;
+    content: "";
+    height: 73%;
+    width: 2px;
+    background-color: #888;
+    left: 55rem;
+}
+.container-fluid .row .col-md-8 .footer-logo{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-fluid .row .col-md-8 .footer-logo img{
+    height: 9rem;
+}
+.container-fluid .row .col-md-8 .footer-logo span{
+    color: var(--green);
+    font-family: 'Quicksand';
+    font-size: 2rem;
+}
+.container-fluid .row .col-md-8 .navigation{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1rem;
+}
+.container-fluid .row .col-md-8 .navigation a{
+text-decoration: none;
+font-size: 1.1rem;
+color: #fff;
+margin: .5rem;
+}
+.container-fluid .row .col-md-8 .navigation a:hover{
+color: var(--green);
+}
+.container-fluid .row .col-md-8 p{
+    color: #fff;
+    text-align: justify;
+    margin: .5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.container-fluid .row .col-md-4 a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+.container-fluid .row .col-md-4 h4{
+    color: #fff;
+    margin: 1rem;
+}
+.container-fluid .row .col-md-4 .social{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.container-fluid .row .col-md-4 .social a{
+    /* background-color: #f0fff6; */
+    width: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    color: #fff;
+    transition: .3s ease-in-out;
+    opacity: 30%;
+}
+.container-fluid .row .col-md-4 .social a:hover{
+    transform: translateY(-.2rem);
+    opacity: 100%;
+}
+.container-fluid .row .col-md-4 .social a i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    padding: .5rem;
+    color: #fff;
+    margin: .5rem;
+}
+
+
+/* Footer End Here--------------------------------- */

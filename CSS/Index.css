@@ -1,0 +1,204 @@
+*{
+    font-family: 'Quicksand';
+}
+/* banner1 with search bar---------------------- */
+.banner1{
+    margin: 3rem 0;
+    background-image: url(../images/banner1.jpg);
+    width: auto;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.banner1 h2{
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.banner1 h1{
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.banner1 .search{
+    width: 30rem;
+    height: 4rem;
+    border-radius: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+}
+.banner1 .search input{
+    border: 2px solid var(--green);
+    height: 100%;
+    width: 80%;
+    border-radius: 25rem 0 0 25rem;
+    /* border: none; */
+    padding-left: 2rem;
+}
+
+.banner1 .search button{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 0 25rem 25rem 0;
+    height: 100%;
+    width: 20%;
+    font-size: 2rem;
+}
+
+/* 1st Section Our Recipes Start Here--------------------- */
+.our_recipes{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.our_recipes h1 span{
+color: var(--green);
+}
+.our_recipes nav{
+    margin: 2rem;
+    background-color: #fff;
+    font-size: x-large;
+}
+.our_recipes .breadcrumb .active{
+    color: var(--green);
+}
+.our_recipes .breadcrumb .breadcrumb-item a{
+    text-decoration: none;
+    color: gray;
+}
+.our_recipes .breadcrumb .breadcrumb-item a:hover{
+    color: var(--green);
+}
+.our_recipes .row{
+    text-transform: none;
+    width: 95%;
+}
+/* .our_recipes .row .col-md-6 .big_card .like{
+    position: absolute;
+    right: 10rem;
+    top: 10rem;
+} */
+.our_recipes .row .col-md-6 .big_card{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    box-shadow: 0 0 1px 0 gray;
+    width: 100%;
+    height: 100%;
+    padding: .3rem;
+}
+.our_recipes .row .col-md-6 .big_card img{
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 30rem;
+}
+.our_recipes .row .col-md-6 .big_card h3{
+    margin-left: 1rem;
+}
+.our_recipes .row .col-md-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.our_recipes .row .col-md-3 .card .like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: .7rem;
+    top: 12.2rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.185);
+}
+.our_recipes .row .col-md-3 .card .like:hover{
+    background-color: var(--green);
+    color: #fff;
+}
+.our_recipes .row .col-md-3 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1px 0 gray;
+    border-radius: none !important;
+    width: 100%;
+    padding: .3rem;
+    margin: .5rem;
+}
+.our_recipes .row .col-md-3 .card img{
+    height: 14rem;
+    /* margin: .5rem; */
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.our_recipes .row .col-md-3 .card h4{
+    font-size: 1rem;
+    margin: .5rem 0;
+}
+
+
+
+/* Owl Carousel Cooking Partners ---------------------- */
+.owl-carousel{
+    width: 80vw;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+.owl-nav .owl-prev{
+    position: absolute;
+    left: -2rem;
+    top: 30%;
+}
+
+.owl-nav .owl-next{
+    
+    position: absolute;
+    right: -2rem;
+    top: 30%;
+}
+.owl-nav .owl-prev img{
+    height: 2rem;
+}
+.owl-nav .owl-next img{
+    height: 2rem;
+}
+.cooking_parner{
+    padding: 2rem;
+    margin: 3rem 0;
+    background-color: var(--light-green); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+.cooking_parner span{
+    color: var(--green);
+}
+.cooking_parner .owl-carousel .item{
+    /* margin: 2rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin-bottom: 1rem;
+}
+.cooking_parner .owl-carousel .item img{
+    object-fit: contain;
+}
